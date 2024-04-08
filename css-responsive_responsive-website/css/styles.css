@@ -254,6 +254,7 @@ width, etc. */
   }
   .intro-text {
     width: 48%;
+    align-self: flex-start;
   }
 }
 /* --- */
