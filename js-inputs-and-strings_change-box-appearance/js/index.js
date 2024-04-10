@@ -25,3 +25,13 @@ colorButton.addEventListener("input", () => {
   const hue = colorButton.value;
   box.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
 });
+
+radiusButton.addEventListener("input", () => {
+  const borderRadius = radiusButton.value + "%";
+  box.style.borderRadius = borderRadius;
+});
+
+rotationButton.addEventListener("input", () => {
+  const rotation = rotationButton.value * 10 + "deg";
+  box.style.transform = `rotate(${rotation})`;
+});
