@@ -18,11 +18,13 @@ separation(2);
 */
 
 // --v-- write your code here --v--
-function greet(name) {
-  console.log("Welcome " + name, "good to see you again!");
+function greet(banana) {
+  console.log("Welcome " + banana, "good to see you again!");
 }
 
 greet("Alice");
+greet("Bob");
+greet("Mary");
 
 // --^-- write your code here --^--
 
@@ -34,8 +36,8 @@ Note: Separation text means the text that is logged into the console before each
 */
 
 // --v-- write your code here --v--
-function separation(Exercise) {
+function separation(exerciseNumber) {
   console.log("-------------");
-  console.log("Exercise " + Exercise);
+  console.log("Exercise " + exerciseNumber);
 }
 // --^-- write your code here --^--
