@@ -26,8 +26,8 @@ form.addEventListener("submit", (event) => {
 });
 
 tosCheckbox.addEventListener("input", (event) => {
-  console.log(tosCheckbox);
-  if (event.target.checked == false) {
+  console.log(tosCheckbox.checked);
+  if (event.target.checked === false) {
     showTosError();
   } else {
     hideTosError();
