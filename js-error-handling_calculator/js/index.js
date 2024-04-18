@@ -18,12 +18,13 @@ const operations = {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  errorMessage.innerText = "";
   const firstNumber = Number(event.target.firstNumber.value);
   const secondNumber = Number(event.target.secondNumber.value);
   const operation = event.target.operation.value;
   try {
     output.innerText = operations[operation](firstNumber, secondNumber);
   } catch (error) {
-    errorMessage.textContent = "Cannot divide by zero!";
+    errorMessage.innerText = "Cannot divide by zero!";
   }
 });
