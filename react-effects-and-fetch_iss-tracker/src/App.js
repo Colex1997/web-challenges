@@ -5,6 +5,8 @@ import "./styles.css";
 
 const URL = "https://api.wheretheiss.at/v1/satellites/25544";
 
+let cleanup = 0;
+
 export default function App() {
   const [coords, setCoords] = useState({
     longitude: 0,
@@ -12,17 +14,17 @@ export default function App() {
   });
 
   useEffect(() => {
-    let timeOutID;
     async function getISSCoords() {
       const response = await fetch(URL);
       const data = await response.json();
       setCoords({ longitude: data.longitude, latitude: data.latitude });
     }
-    if (coords) {
-      setInterval(getISSCoords, 5000);
-    }
+    const intervID = setInterval(() => {
+      getISSCoords;
+    }, 3000);
     return () => {
-      clearInterval(timeOutID);
+      console.log(cleanup++);
+      clearInterval(intervID);
     };
   }, []);
 

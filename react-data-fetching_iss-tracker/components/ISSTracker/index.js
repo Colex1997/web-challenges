@@ -13,7 +13,7 @@ export default function ISSTracker() {
   //   latitude: 0,
   // });
   const { data, error, isLoading } = useSWR(URL, fetcher, {
-    refreshInterval: 15000,
+    refreshInterval: 5000,
   });
 
   if (error) return <div>failed to load</div>;
